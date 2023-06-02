@@ -1,0 +1,326 @@
+below is html basic app code
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delivery App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        .delivery-form {
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 10px;
+        }
+        
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 5px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        
+        select {
+            width: 100%;
+            padding: 5px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 8px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #45a049;
+        }
+        
+        .delivery-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .delivery-item {
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .delivery-item p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fast Fetch</h1>
+        
+        <form class="delivery-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="availability">Availability</label>
+                <select id="availability" name="availability" required>
+                    <option value="">Select availability</option>
+                    <option value="Morning">Morning</option>
+                    <option value="Afternoon">Afternoon</option>
+                    <option value="Evening">Evening</option>
+                </select>
+            </div>
+            <button class="btn" type="submit">Offer to Deliver</button>
+        </form>
+        
+        <h2>Available Deliveries</h2>
+        <ul class="delivery-list">
+            <li class="delivery-item">
+                <p><strong>Item:</strong> Food order[main gate]</p>
+                <p><strong>Delivery Address:</strong> Hostel block C 678</p>
+                <p><strong>Compensation:</strong> 15 coins</p>
+                <button class="btn">Select for Delivery</button>
+            </li>
+            <li class="delivery-item">
+                <p><strong>Item:</strong> Package[flipkart]</p>
+                <p><strong>Delivery Address:</strong> hostel block A 123</p>
+                <p><strong>Compensation:</strong> 15 coins</p>
+                <button class="btn">Select for Delivery</button>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+FOLLOWING IS THE HTML PAYMENT CODE
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta
+	name="viewport"
+	content="width=device-width,
+			initial-scale=1.0"/>
+	<link rel="stylesheet" href="style.css"
+		class="css" />
+</head>
+<body>
+	<div class="container">
+	<div class="main-content">
+		<p class="text">GeeksforGeeks</p>
+	</div>
+
+	<div class="centre-content">
+		<h1 class="price">coinz<span></span></h1>
+		<p class="course">
+		payment gatway for coinz
+		</p>
+	</div>
+
+	<div class="last-content">
+		<button type="button" class="pay-now-btn">
+		Redeem coinz
+		</button>
+		<button type="button" class="pay-now-btn">
+		Buy more coinz
+		</button>
+
+		<!-- <button type="button" class="pay-now-btn">
+		Netbanking options
+		</button> -->
+	</div>
+
+	<div class="card-details">
+		<p>Provide your details transaction</p>
+
+		<div class="card-number">
+		<label> Card Number </label>
+		<input
+			type="text"
+			class="card-number-field"
+			placeholder="###-###-###"/>
+		</div>
+		<br />
+		<div class="date-number">
+		<label> Expiry Date </label>
+		<input type="text" class="date-number-field"
+				placeholder="DD-MM-YY" />
+		</div>
+
+		<div class="cvv-number">
+		<label> CVV number </label>
+		<input type="text" class="cvv-number-field"
+				placeholder="xxx" />
+		</div>
+		<div class="nameholder-number">
+		<label> Card Holder name </label>
+		<input
+			type="text"
+			class="card-name-field"
+			placeholder="Enter your Name"/>
+		</div>
+		<button type="submit"
+				class="submit-now-btn">
+		submit
+		</button>
+	</div>
+	</div>
+</body>
+</html>
+
+
+
+CSS CODE FOR ABOVE HTML PAYMENT GATEWAY CODE
+* {
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+font-weight: bold;
+}
+
+.container {
+height: 900px;
+width: 400px;
+background-image: linear-gradient(#1e6b30, #308d46);
+top: 50%;
+left: 50%;
+position: absolute;
+transform: translate(-50%, -50%);
+position: absolute;
+border-bottom-left-radius: 180px;
+border-top-right-radius: 150px;
+}
+
+.main-content {
+height: 235px;
+background-color: #1b9236;
+border-bottom-left-radius: 90px;
+border-bottom-right-radius: 80px;
+border-top: #1e6b30;
+}
+
+.text {
+text-align: center;
+font-size: 300%;
+text-decoration: aliceblue;
+color: aliceblue;
+}
+
+.course {
+color: black;
+font-size: 25px;
+font-weight: bolder;
+}
+
+.centre-content {
+height: 180px;
+margin: -70px 30px 20px;
+color: aliceblue;
+text-align: center;
+font-size: 20px;
+border-radius: 25px;
+padding-top: 0.5px;
+background-image: linear-gradient(#1e6b30, #308d46);
+}
+
+.centre-content-h1 {
+padding-top: 30px;
+padding-bottom: 30px;
+font-weight: normal;
+}
+
+.price {
+font-size: 60px;
+margin-left: 5px;
+bottom: 15px;
+position: relative;
+}
+
+.pay-now-btn {
+cursor: pointer;
+color: #fff;
+height: 50px;
+width: 290px;
+border: none;
+margin: 5px 30px;
+background-color: rgb(71, 177, 61);
+position: relative;
+}
+
+.card-details {
+background: rgb(8, 49, 14);
+color: rgb(225, 223, 233);
+margin: 10px 30px;
+padding: 10px;
+/* border-bottom-left-radius: 80px; */
+}
+
+.card-details p {
+font-size: 15px;
+}
+
+.card-details label {
+font-size: 15px;
+line-height: 35px;
+}
+
+.submit-now-btn {
+cursor: pointer;
+color: #fff;
+height: 30px;
+width: 240px;
+border: none;
+margin: 5px 30px;
+background-color: rgb(71, 177, 61);
+}
